@@ -17,8 +17,7 @@ html, body{
     justify-content: center;
     align-items: center;
     user-select: none;
-
-    background-image: url(..\..\assets\background_image.gif);
+    background-image: url('src/assets/background_image.gif');
     background-size: cover;
 }
 

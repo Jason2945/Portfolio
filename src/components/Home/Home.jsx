@@ -1,7 +1,5 @@
 import React from 'react';
 import './Home.css'; 
-import { GoogleLogin } from '@react-oauth/google';
-
 
 const Home = () => {
   return (
