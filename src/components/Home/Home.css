@@ -1,0 +1,31 @@
+@keyframes FadingSign {
+    0% {opacity: 0%;}
+    50% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.Homepage_Component{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+    background-image: url(..\..\assets\background_image.gif);
+    background-size: cover;
+}
+
+.Homepage_Welcome_Message{
+    font-size: 10rem;
+    color: yellow;
+    animation-name: FadingSign;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
