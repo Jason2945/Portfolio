@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import { Link } from "react-router-dom";
+
 import './NavBar.css';
-import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
+
+import { Button, Dialog, DialogPanel } from '@headlessui/react';
 import GoogleIcon from '../../assets/icons/google_icon.svg?react';
 import LinkedInIcon from '../../assets/icons/linkedin_icon.svg?react';
 import GmailIcon from '../../assets/icons/gmail_icon.svg?react';
@@ -14,6 +17,7 @@ const NavBar = () => {
   // Google login success and failure handlers
   const handleLoginSuccess = (response) => {
     console.log("Google login success:", response);
+    setLoginOpen(false);
     // You can send the `response.credential` to your backend for authentication
   };
 
@@ -22,19 +26,20 @@ const NavBar = () => {
   };
 
   return (
+    
     <div className="NavBar_Component">
         <div className="LeftSide_Stuff">
-            <button>Home</button>
-            <button>Projects</button>
-            <button>About Me</button>
+          <Link to="/">Home</Link>
+          <Link to="/Projects">Projects</Link>
+          <Link to="/AboutMe">About Me</Link>
         </div>
 
         <div className="RightSide_Stuff">
             {/* When GoogleIcon is clicked, Login is opened. When closed out, Login is closed */}
             <GoogleIcon className="Icons" onClick={() => setLoginOpen(true)}/>
-            <LinkedInIcon className="Icons"/>
-            <GithubIcon className="Icons"/>
-            <GmailIcon className="Icons"/>
+            <a href="https://www.linkedin.com/in/jason-wang-69863a176/"> <LinkedInIcon className="Icons"/> </a>
+            <a href="https://github.com/Jason2945"> <GithubIcon className="Icons"/> </a>
+            <a href="mailto:wj2945@gmail.com"> <GmailIcon className="Icons"/> </a>
 
             {/* Dialog for login */}
             <Dialog open={LoginOpen} onClose={() => setLoginOpen(false)}>

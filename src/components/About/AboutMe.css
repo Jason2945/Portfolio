@@ -1,0 +1,13 @@
+.AboutMe_Component{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.AboutMe_Component h1{
+    font-size: 5rem;
+    color: lightgoldenrodyellow;
+}

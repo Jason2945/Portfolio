@@ -9,25 +9,27 @@
     position: fixed;
     width: 100vw;
     height: 5vh;
-    margin-top: 1%;
-}
-
-.NavBar_Component button{
-    color: #FFD0C7;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    caret-color: transparent;
+    top: 1%;
 }
 
 .LeftSide_Stuff{
     display: flex;
-    width: 50vw;
+    width: 70vw;
     gap: 15%;
     margin-left: 1%;
 }
 
-.NavBar_Component button:hover{
+.LeftSide_Stuff a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFD0C7;
+    font-size: 2rem;
+    caret-color: transparent;
+    text-decoration: none;
+}
+
+.NavBar_Component a:hover{
     color: red;
     cursor: pointer;
 }
@@ -35,15 +37,22 @@
 .RightSide_Stuff {
     display: flex;
     flex-direction: row-reverse;
-    width: 50vw;
+    width: 30vw;
     margin-right: 1%;
+}
+
+.RightSide_Stuff a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
 }
 
 .Icons {
     display: flex;
     flex-direction: row-reverse;
     height: 100%;
-    width: 10%;
+    width: 100%;
     cursor: pointer;
     animation-name: RotatingIcons;
     animation-duration: 4s;
