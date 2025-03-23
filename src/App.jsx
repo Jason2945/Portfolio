@@ -3,7 +3,7 @@ import NavBar from './components/NavBar/NavBar.jsx';
 import Home from './components/Home/Home.jsx';
 import Projects from './components/Projects/Projects.jsx';
 import AboutMe from './components/About/AboutMe.jsx';
-import './app.css'
+import './App.css'
 
 const App = () => {
   return (
